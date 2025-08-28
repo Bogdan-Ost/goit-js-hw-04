@@ -5,7 +5,11 @@ function calcAverageCalories(days) {
     calorie.push(calc.calories);
     total += calc.calories;
   }
-  return total / 7;
+  if (calorie.length > 0) {
+    return total / calorie.length;
+  } else {
+    return 0;
+  }
 }
 
 console.log(
